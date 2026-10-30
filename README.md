@@ -25,5 +25,3 @@ This guide is about Dashcast setup and connection. It intentionally excludes Fri
 - [TECHO5 dashcast compose example](https://github.com/HuskerMinion/techo5/blob/main/dashcast/docker-compose.yml)
 - [Unraid Docker documentation](https://docs.unraid.net/category/run-docker-containers/)
 - [Home Assistant documentation](https://www.home-assistant.io/docs/)
-
-The referenced 25 October 2026 conversation exposed only its final scope summary, not the earlier private configuration transcript. This repository records verified upstream settings and does not claim any unrecovered private values.
