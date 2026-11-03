@@ -22,6 +22,16 @@ Verify HA_URL is reachable from the machine running Dashcast, not merely from yo
 
 Recheck that **Dashboard** is **Streamed**, **Dashboard to show** names the intended dashboard, and **Dashboard when idle** is enabled if wanted. On Echo Show, swipe from the left edge of the clock.
 
+If **Dashboard to show** only contains **Automatic** and the device loads Overview, use Home Assistant **Developer Tools → Actions** to call the device-specific dashboard path action. For example, call `esphome.al_show_5_dashboard_path` with:
+
+```yaml
+action: esphome.al_show_5_dashboard_path
+data:
+  path: 'al-show-5/0'
+```
+
+The action name varies by device; use the matching `esphome.<device>_dashboard_path` action exposed for your TECHO5 device. The example path is not universal: take the relative path from the actual dashboard URL, such as `al-show-5/0` from `http://home-assistant/al-show-5/0`. No Docker or Dashcast container changes are required.
+
 ## Touches behave unexpectedly
 
 Test a standard Home Assistant control first. Then check the custom card in a normal browser session for the dedicated user. Avoid adding unrelated kiosk, camera, or latency settings until the basic stream works.
